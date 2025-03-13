@@ -2,19 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,700;1,200;1,400&display=swap');
 
 .page {
-  background-color: #f9f9f9;
-  /* background-image: url('/assets/auth.jpg'); */
+  background-color: #fff;
+  background-image: url('/assets/auth.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #000;
+  color: #000; /* Black text */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding-top: 7rem;
-  padding-bottom: 2rem;
+  padding: 7rem;
 }
 
 .header {
@@ -27,35 +26,13 @@
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  position: relative;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.typingEffect {
-  border-right: 0.15em solid #000;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 2s steps(30, end),
-             blink-caret 0.95s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #000 }
 }
 
 .subtitle {
   font-family: "Nunito", sans-serif;
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #838383;
+  color: #838383; /* Lighter shade */
 }
 
 .hero {
@@ -85,37 +62,6 @@
 
 .getStarted button:hover {
   background-color: #161616;
-}
-
-.howItWorks {
-  width: 100%;
-  max-width: 800px;
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
-.steps {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.step {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 1.5rem;
-  border-radius: 8px;
-}
-
-.step h4 {
-  font-family: "Nunito", sans-serif;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.step p {
-  font-family: "Nunito", sans-serif;
-  font-size: 1rem;
-  line-height: 1.4;
 }
 
 .features {
