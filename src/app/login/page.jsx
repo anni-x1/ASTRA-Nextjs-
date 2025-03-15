@@ -10,11 +10,19 @@ export default function page() {
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
     const router = useRouter()
-    const handleLogin = async () => {
-        if (!username || !password) {
-            setError('Username and password are required')
-            return
+    const validateLogin = () => {
+        if (!username.trim()) {
+            setError('Username is required');
+            return false;
         }
+        if (!password.trim()) {
+            setError('Password is required');
+            return false;
+        }
+        return true;
+    }
+    const handleLogin = async () => {
+        if (!validateLogin()) return;
         
         setLoading(true)
         setError('')

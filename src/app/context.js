@@ -8,6 +8,7 @@ export function AppProvider({ children }) {
     const [listening, setListening] = useState(false);
     const [authenticated, setAuthenticated] = useState(false);
     const [user, setUser] = useState(null);
+    const [audioBlob, setAudioBlob] = useState(null);
 
 
     return (
@@ -20,6 +21,8 @@ export function AppProvider({ children }) {
         setAuthenticated,
         user,
         setUser,
+        audioBlob,
+        setAudioBlob,
       }}>
         {children}
       </AppContext.Provider>

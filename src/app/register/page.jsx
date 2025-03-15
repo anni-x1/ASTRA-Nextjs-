@@ -13,12 +13,32 @@ export default function page() {
     const [username, setName] = useState('')
     const [error, setError] = useState('')
     const router = useRouter()
-    const handleRegister = async () => {
-        console.log(username, email, password, confirmPassword);
-        if (password !== confirmPassword) {
-            alert('Passwords do not match!')
-            return
+    const validateRegister = () => {
+        if (!username.trim()) {
+            setError('Username is required');
+            return false;
         }
+        if (!email.trim()) {
+            setError('Email is required');
+            return false;
+        }
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            setError('Invalid email format');
+            return false;
+        }
+        if (!password.trim()) {
+            setError('Password is required');
+            return false;
+        }
+        if (password !== confirmPassword) {
+            setError('Passwords do not match');
+            return false;
+        }
+        return true;
+    }
+    const handleRegister = async () => {
+        if (!validateRegister()) return;
         try {
             const response = await fetch('http://localhost:3000/api/auth/register', {
               method: 'POST',

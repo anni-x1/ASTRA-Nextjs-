@@ -8,7 +8,7 @@ import styles from './page.module.css';
 import Link from 'next/link';
 
 export default function Page() {
-  const { authenticated, setAuthenticated } = React.useContext(AppContext);
+  const { authenticated } = React.useContext(AppContext);
 
   return (
     <>
@@ -29,7 +29,7 @@ export default function Page() {
               Speak naturally, and let ASTRA handle the rest.
             </p>
             <div className={styles.getStarted}>
-              <Link href="/login">
+              <Link href="/register">
                 <button>Get Started</button>
               </Link>
             </div>

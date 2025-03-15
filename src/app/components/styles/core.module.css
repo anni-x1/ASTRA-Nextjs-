@@ -1,3 +1,12 @@
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  gap: 2rem;
+  padding-top: 5rem;
+}
 /* Container to keep the pulsating core contained */
 .pulsatingCoreContainer {
   width: 400px;
@@ -9,7 +18,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  padding-top: 0;
+  padding-right: 6rem;
+  padding-left: 4rem;
+  border-right: 1px solid #000000;
   /* Optional: centers the container in its parent */
 }
 
@@ -51,4 +63,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.chatWindowContainer {
+  flex: 1;
+  max-width: 500px;
+  height: 100vh;
+  padding: 1rem;
 }

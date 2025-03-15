@@ -21,7 +21,7 @@ const Listen = () => {
           
           const volume = data.reduce((a, b) => a + b, 0) / data.length; // Avg volume
           // console.log(volume)
-          const newSize = 0.5 + (volume / 255) * 1.3; // Normalize size
+          const newSize = 0.5 + (volume / 255) * 1; // Normalize size
           // console.log("Volume:", volume, "New size:", newSize);
 
           setSize(newSize);

@@ -6,11 +6,13 @@ import core from "../assets/core.png";
 import style from "./styles/core.module.css";
 import Image from "next/image";
 import AudioStream from "./AudioStream";
+import ChatWindow from "./ChatWindow";
 const Core = () => {
   const { size, listening, setListening } = React.useContext(AppContext);
 
   return (
-    <div className={style.pulsatingCoreContainer}>
+    <div className={style.mainContainer}>
+      <div className={style.pulsatingCoreContainer}>
       {listening ?
         <div
           className={style.coreDiv}
@@ -25,6 +27,10 @@ const Core = () => {
         </div>
       }
       {listening && <AudioStream />}
+    </div>
+    <div className={style.chatWindowContainer}>
+      <ChatWindow />
+    </div>
     </div>
   );
 };

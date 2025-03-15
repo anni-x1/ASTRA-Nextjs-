@@ -87,3 +87,6 @@
 .sidebarContent li:hover {
   color: #4a90e2;
 } 
+.sidebarList {
+  padding-top: 10rem;
+}

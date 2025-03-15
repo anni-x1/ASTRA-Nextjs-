@@ -40,10 +40,9 @@ export default function Navbar() {
           // Authenticated layout: menu (left), title (center), profile (right)
           <>
             <div className={style.menuIcon} onClick={toggleSidebar}>
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
-                <path d="M0 0h24v24H0V0z" fill="none" />
-                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-              </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+            <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm440-80h120v-560H640v560Zm-80 0v-560H200v560h360Zm80 0h120-120Z"/>
+            </svg>
             </div>
             <h1 className={style.title}>ASTRA</h1>
             <div className={style.profileIcon} onClick={toggleProfilePanel}>{user.username.charAt(0).toUpperCase()}</div>
@@ -51,7 +50,7 @@ export default function Navbar() {
         ) : (
           // Non-authenticated layout: title (left), login/register (right)
           <>
-            <h1 className={style.title}>ASTRA</h1>
+            <Link className={style.title} href="/">ASTRA</Link>
             <div className={style.authButtons}>
               <button className={style.loginButton}>
                 <Link style={{ textDecoration: 'none', color: 'white' }} href="/login">Login</Link>
