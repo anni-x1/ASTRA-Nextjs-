@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cabin+Sketch:wght@400;700&family=Gugi&family=Madimi+One&family=Nova+Round&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+.statusMessage {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000000;
+    text-align: left;
+    padding-left: 15rem;
+    padding-bottom: 5rem;
+}
+
+.micButton {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    background-color: #bdbdbd;
+    color: #fff;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 55px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.micButton:hover {
+    background-color: #acacac;
+}

@@ -1,0 +1,73 @@
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  gap: 2rem;
+  padding-top: 5rem;
+}
+/* Container to keep the pulsating core contained */
+.pulsatingCoreContainer {
+  width: 400px;
+  /* Fixed width */
+  height: 330px;
+  /* Fixed height */
+  overflow: hidden;
+  /* Prevents the pulsating element from overflowing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+  padding-right: 6rem;
+  padding-left: 4rem;
+  border-right: 1px solid #000000;
+  /* Optional: centers the container in its parent */
+}
+
+.coreDiv {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(0.52);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(0.55);
+    opacity: 0.8;
+  }
+  75% {
+    transform: scale(0.57);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+}
+
+.pulsateCore {
+  animation: pulsate 2s infinite;
+  /* Add other styles for your core element */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chatWindowContainer {
+  flex: 1;
+  max-width: 500px;
+  height: 100vh;
+  padding: 1rem;
+}
